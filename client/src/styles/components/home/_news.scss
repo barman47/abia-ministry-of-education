@@ -1,0 +1,92 @@
+.news {
+    background-color: $white;
+    padding: $md $xlg $xxxlg $xlg;
+
+    div:first-child {
+        display: flex;
+        justify-content: space-between;
+
+        h5 {
+            font-weight: 600;
+            margin-bottom: $md;
+            margin-top: $xs;
+        }
+        
+        a {
+            border-radius: 0;
+            height: 100%;
+            margin-bottom: $xs;
+            margin-top: $md;
+            width: initial;
+            padding-bottom: 0.3em;
+            padding-top: 0.3em;
+            padding-left: $lg;
+            padding-right: $lg;
+        }
+    }
+
+    div:last-child {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: $xlg;
+        row-gap: $xxxlg;
+
+        section {
+            border-radius: 5px;
+            border-top-right-radius: 5px;
+            box-shadow: $shadow;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: $md;
+
+            img {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                width: 100%;
+            }
+
+            h5 {
+                margin-left: $xs;
+                margin-right: $xs;
+            }
+
+            small {
+                margin-left: $lg;
+            }
+
+            a {
+                text-align: center;
+                margin-top: $sm;
+            }
+
+            a:hover {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $md-breakpoint) {
+    .news {
+        div:last-child {
+            grid-template-columns: 2fr 2fr;
+        }
+    }
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    .news {
+        div:first-child {
+            flex-direction: column;
+
+            a {
+                width: 40%;
+                margin-bottom: $lg;
+            }
+        }
+
+        div:last-child {
+            grid-template-columns: 1fr;
+        }
+    }
+}

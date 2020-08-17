@@ -1,0 +1,93 @@
+.mission-and-vision {
+    background-color: $primary-color;
+    color: $white;
+    padding-bottom: $xlg;
+    padding-top: $lg;
+
+    h4 {
+        color: $secondary-color;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: $lg;
+        text-align: center;
+    }
+
+    h6 {
+        border-bottom: 1px solid darken($off-white, 20%);
+        padding-bottom: $sm;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: $xxxlg;
+        row-gap: 10em;
+        padding-left: 18em;
+        padding-right: 18em;
+
+        div {
+            background-color: transparentize($white, 0.9);
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: justify;
+            padding: $lg;
+            padding-right: $lg;
+            transition: $transition;
+
+            h6 {
+                font-weight: 500;
+                margin: 0;
+                margin-top: -$xxlg;
+                text-align: center;
+            }
+
+            p:first-child {
+                background-color: #227839;
+                border-radius: 50%;
+                box-shadow: $shadow;
+                margin: 0 auto;
+                position: relative;
+                top: -6em;
+                text-align: center;
+                height: 8em;
+                width: 8em;
+
+                span {
+                    font-size: $xxxlg;
+                }
+            }
+
+            p {
+                color: $off-white;
+                margin-top: $sm;
+            }
+        }
+
+        div:hover {
+            box-shadow: $shadow;
+        }
+    }
+}
+
+@media screen and (max-width: $lg-breakpoint) {
+    .mission-and-vision {
+        section {
+            padding-left: $xxxlg;
+            padding-right: $xxxlg;
+        }
+    }
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    .mission-and-vision {
+        h4 {
+            margin-bottom: $xlg;
+        }
+
+        section {
+            grid-template-columns: 1fr;
+            padding-left: $xlg;
+            padding-right: $xlg;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+.banner {
+    background-color: $white;
+    background-color: $primary-color;
+    color: $white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    div:first-child {
+        height: 100%;
+        width: 100%;
+    }
+
+    header {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: $xxxlg;
+        padding-left: $xxxlg;
+        padding-top: $xxxlg;
+
+        h3 {
+            color: $secondary-color;
+            font-weight: 600;
+            margin: 0;
+            margin-bottom: $xs;
+            margin-top: $xs;
+        }
+
+        h6 {
+            margin-bottom: $lg;
+            line-height: 1.6;
+        }
+
+        a {
+            text-align: center;
+            width: 30%;
+        }
+    }
+
+    div:last-child {
+        background-image: url(../../../img/banner.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-bottom-left-radius: 50%;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    .banner {
+        background-image: url(../../../img/banner.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        grid-template-columns: 1fr;
+        height: 100%;
+        width: 100%;
+
+        header {
+            padding-left: $sm;
+            padding-right: $sm;
+            width: 100%;
+
+            h3 {
+                color: $white;
+                font-size: $lg;
+            }
+
+            h6 {
+                text-align: justify;
+            }
+
+            a {
+                width: 50%;
+            }
+        }
+
+        div:last-child {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: $md-breakpoint) {
+    .banner {
+        width: 100%;
+
+        header {
+            width: 100%;
+            padding-left: $md;
+            padding-right: $md;
+
+            a {
+                width: 55%;
+            }
+        }
+    }
+}
+// .banner {
+//     background-image: url(../../../img/banner.jpg);
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+//     height: 100vh;
+//     width: 100vw;
+
+//     div:first-child {
+//         background-color: rgba(0, 0, 0, 0.4);
+//         height: 100%;
+//         width: 100%;
+//     }
+
+//     header {
+//         height: 100%;
+//         width: 80%;
+//         display: flex;
+//         flex-direction: column;
+//         // justify-content: space-between;
+//         padding-left: $xxxlg;
+//         padding-top: $xxxlg;
+
+//         h3 {
+//             color: $white;
+//             font-weight: 600;
+//             margin: 0;
+//             margin-bottom: $xs;
+//             margin-top: $xs;
+//         }
+
+//         h6 {
+//             color: $off-white;
+//             margin-bottom: $lg;
+//         }
+
+//         a {
+//             text-align: center;
+//             width: 15%;
+//         }
+//     }
+// }

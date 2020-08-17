@@ -1,0 +1,103 @@
+footer {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: $black;
+    padding-bottom: $lg;
+    padding-top: $lg;
+    section:first-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: $xs;
+        margin-bottom: $lg;
+
+        a {
+            justify-self: flex-end;
+        }
+        
+        img {
+            width: 5em;
+        }
+
+        p {
+            align-self: center;
+        }
+    }
+
+    section:nth-child(2) {
+        border-top: 1px solid darken($off-white, 50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 $lg;
+        padding: $lg 0;
+
+        ul li {
+            display: inline-block;
+            margin-right: $sm;
+        }
+        ul li a {
+            color: $off-black;
+        }
+        ul li a {
+            color: $off-black;
+        }
+        ul li a:visited {
+            color: $off-black;
+        }
+        ul li a:hover {
+            color: $primary-color;
+        }
+        ul li a:active {
+            color: $red;
+        }
+
+        div a {
+            color: $off-black;
+            margin-left: $sm;
+        }
+        div a:visited {
+            color: $off-black;
+        }
+        div a:hover {
+            color: $primary-color;
+        }
+        div a:active {
+            color: $red;
+        }
+    }
+
+    .copyright {
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    footer {
+        section:first-child {
+            grid-template-columns: 1fr 4fr;
+            padding-left: $lg;
+            p {
+                justify-self: flex-start;
+            }
+        }
+
+        section:nth-child(2) {
+            flex-direction: column;
+            
+            ul {
+                text-align: center;
+                margin-bottom: $xs;
+                margin-top: $xs;
+            }
+
+            div {
+                text-align: center;
+            }
+        }
+
+        .copyright {
+            font-size: $xs;
+        }
+    }
+}

@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $off-white;
+    font-family: $primary-font;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+.breadcrumb {
+    background-color: $white;
+    border: 1px solid red;
+    margin-top: $md;
+}
+
+.breadcrumb a {
+    font-size: $xs;
+}
+
+.breadcrumb a:first-child {
+    color: $gray;
+}
+
+.breadcrumb h4 {
+    color: $off-black;
+}
+
+.modal .datepicker-modal {
+    width: 80% !important;
+}
+
+.date-text, .year-text {
+    font-family: $primary-font;
+}
+
+.datepicker-table td.is-today {
+    color: $primary-color;
+}
+
+.datepicker-date-display {
+    background-color: $primary-color;
+}
+
+.datepicker-cancel, .datepicker-done {
+    color: $primary-color;
+}
+
+.is-selected button.datepicker-day-button {
+    background-color: $primary-color;
+    color: $white;
+}
+
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+// }
+
+.invalid-text {
+    color: $red !important;
+}
+
+.toast-invalid {
+    background-color: $error-text !important;
+    border-radius: 5px !important;
+    color: $off-white !important;
+    font-family: $primary-font;
+}
+
+.toast-valid {
+    background-color: $success-text !important;
+    border-radius: 5px !important;
+    color: $off-white !important;
+    font-family: $primary-font;
+}
+
+// .input-field {
+//     margin-left: $md;
+//     margin-right: $md;
+// }
+
+/* label color */
+.input-field label {
+    color: $gray !important;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label, .input-field input[type=password]:focus + label, .input-field textarea:focus + label, .input-field select:focus + label {
+    color: lighten($primary-color, 5%) !important;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field input[type=password]:focus, .input-field textarea:focus, .input-field select:focus {
+    border-bottom: 1px solid lighten($primary-color, 5%) !important;
+    box-shadow: 0 1px 0 0 lighten($primary-color, 5%) !important;
+}
+
+.input-field input[type=text].valid + label, .input-field input[type=email].valid + label, .input-field input[type=password].valid + label, textarea.valid + label, select.valid + label {
+    color: lighten($primary-color, 5%) !important;
+}
+
+/* valid color */
+.input-field input[type=text].valid, .input-field input[type=email].valid, .input-field input[type=password].valid, .input-field textarea.valid, .input-field select.valid {
+    border-bottom: 1px solid $success-text !important;
+    box-shadow: 0 1px 0 0 0 $success-text !important;
+}
+
+/* invalid color */
+.input-field input[type=text].invalid, .input-field input[type=email].invalid, .input-field input[type=password].invalid, .input-field textarea.invalid, .input-field select.invalid {
+    border-bottom: 1px solid $error-text !important;
+    box-shadow: 0 1px 0 0 $error-text !important;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: lighten($primary-color, 5%) !important;
+}
+
+.input-field .prefix {
+    color: darken($gray, 30%) !important;
+}
+
+.input-field .form-input.valid::before {
+    color: darken($gray, 30%) !important;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: lighten($primary-color, 5%);
+}
+
+[type="radio"].with-gap:checked+span:before {
+    border: 2px solid lighten($primary-color, 5%);
+}
+
+[type="checkbox"]+span:not(.lever):before, [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid $primary-color;
+} 
+
+[type="checkbox"]:checked+span:not(.lever):before {
+    border-bottom: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+}
+
+.dropdown-content li > span {
+    color: $primary-color;
+}
+.dropdown-content li > span:hover {
+    background-color: transparentize($primary-color, 0.85);
+}
+
+.button {
+    background-color: lighten($primary-color, 5%);
+    box-shadow: $shadow;
+    border: none;
+    border-radius: 30px;
+    color: $off-white;
+    cursor: pointer;
+    font-family: $primary-font;
+    padding-bottom: $normal;
+    padding-top: $normal;
+    transition: $transition;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: darken($primary-color, 5%);
+    color: $off-white;
+}
+
+button:focus {
+    background-color: lighten($primary-color, 5%);
+}
+
+// .disabled {
+//     background-color: transparentize($secondary-color, 0.8);
+//     box-shadow: none;
+//     padding-top: 6px;
+//     pointer-events: none;
+// }
+
+.disabled-button {
+    background-color: transparent !important;
+    border: 1px solid darken($off-white, 40%) !important;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+    color: darken($off-white, 40%) !important;
+    pointer-events: none !important;
+}
+
+.progress {
+    background-color: $primary-color;
+    margin-bottom: 0;
+    margin-top: -1px;
+    display: none;
+}
+
+.progress .indeterminate {
+    background-color: transparentize($white, 0.4);
+}
+
+.visible {
+    display: block;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: transparentize($primary-color, 0.4);
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: $primary-color;
+}

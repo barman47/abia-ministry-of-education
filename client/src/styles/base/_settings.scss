@@ -1,0 +1,40 @@
+// Font families
+$primary-font: 'Quicksand', sans-serif;
+
+// Sizes
+$xs: 0.8em;
+$sm: 1.2em;
+$normal: 1em;
+$md: 1.5em;
+$lg: 2em;
+$xlg: 3em;
+$xxlg: 4em;
+$xxxlg: 5em;
+
+// Breakpoints
+$lg-breakpoint: 1024px;
+$md-breakpoint: 768px;
+$sm-breakpoint: 640px;
+$xs-breakpoint: 480px;
+
+// Colors
+$primary-color: #096922;
+$secondary-color: #e0e01f;
+$blue: #1da1f2;
+$green: #57b846;
+$red: #ea4335;
+$orange: #ffa500;
+$success-text: #4caf50;
+$error-text: #F44336;
+$white: #ffffff;
+$off-white: #f8f8f8;
+$black: #000000;
+$off-black: #333333;
+$gray: #c8c8c8;
+$dark-gray: #3a3a3a;
+$link-color: #039be5;
+
+// Shadow
+$shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+
+$transition: 0.3s linear all;

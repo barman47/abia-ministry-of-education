@@ -1,0 +1,50 @@
+.team {
+    padding: $xlg $lg;
+
+    h4 {
+        margin-bottom: $sm;
+        text-align: center;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: $xlg;
+        row-gap: $xlg;
+
+        div {
+            border-radius: 10px;
+            box-shadow: $shadow;
+            padding: $lg;
+            text-align: center;
+
+            img {
+                border-radius: 50%;
+                box-shadow: $shadow;
+                width: 80%;
+            }
+
+            h6 {
+                font-weight: 500;
+                margin-bottom: $sm;
+                margin-top: $sm;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $lg-breakpoint) {
+    .team {
+        section {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    .team {
+        section {
+            grid-template-columns: 1fr;
+        }
+    }
+}
