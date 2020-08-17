@@ -5,13 +5,13 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "npm run start --prefix client",
-    "client-install": "yarn --prefix client",
+    "client": "yarn start start --prefix client",
+    "client-install": "yarnl --prefix client",
     "client-build": "yarn run build --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run start --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run client-build"
   },
   "keywords": [
     "WebDevelopment",
