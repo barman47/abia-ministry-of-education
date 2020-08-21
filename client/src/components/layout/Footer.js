@@ -8,7 +8,8 @@ const Footer = () => (
             <Link to="/"><img src={logo} alt="Abia State Ministry of Education Logo" /></Link>
             <h5>Abia State Ministry of Education</h5>
             <p><span className="mdi mdi-map-marker"></span>&nbsp;&nbsp;2nd Building, 3rd Floor, New Secretariat. Ogurube Layout, Umuahia.</p>
-            <p><a href="tel:08012345678"><span className="mdi mdi-email-outline"></span>&nbsp;&nbsp;08012345678</a></p>
+            <p><a href="tel:07081244000"><span className="mdi mdi-phone-in-talk"></span>&nbsp;&nbsp;07081244000</a></p>
+            <p><a href="tel:09020431351"><span className="mdi mdi-phone-in-talk"></span>&nbsp;&nbsp;09020431351</a></p>
             <p><a href="mailto:contact@abiaministryofeducation.org"><span className="mdi mdi-email-outline"></span>&nbsp;&nbsp;contact@abiaministryofeducation.org</a></p>
         </section>
         <section>

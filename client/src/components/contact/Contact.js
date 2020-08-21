@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import M from 'materialize-css';
+import axios from 'axios';
+import Validator from 'validator';
 
 import TextInput from '../input-groups/TextInput';
 import TextArea from '../input-groups/TextArea';
@@ -10,6 +13,82 @@ const Contact = () => {
     const [message, setMessage] = useState('');
     const [errors, setErrors] = useState({});
 
+    const isEmpty = (value) => (
+        value === undefined ||
+        value === null ||
+        (typeof value === 'object' && Object.keys(value).length === 0) ||
+        (typeof value === 'string' && value.trim().length === 0)
+    );
+    
+
+    const validateMessage = (data) => {
+        let errors = {};
+        data.name = !isEmpty(data.name) ?  data.name : '';
+        data.email = !isEmpty(data.email) ?  data.email : '';
+        data.message = !isEmpty(data.message) ?  data.message : '';
+
+        if (Validator.isEmpty(data.name)) {
+            errors.name = 'Your name is required';
+        }
+
+        if (Validator.isEmpty(data.email)) {
+            errors.email = 'Email Address is required!';
+        }
+        if (!Validator.isEmail(data.email)) {
+            errors.email = 'Invalid Email Address!';
+        }
+
+        if (Validator.isEmpty(data.message)) {
+            errors.message = 'Your message is required!';
+        }
+    
+        return {
+            errors,
+            isValid: isEmpty(errors)
+        };
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        alert('button clicked');
+        const data = {
+            name,
+            email,
+            message
+        };
+
+        const { errors, isValid } = validateMessage(data);
+
+        if (!isValid) {
+            M.toast({
+                html: 'Invalid Data',
+                classes: 'toast-invalid'
+            });
+            return setErrors(errors);
+        }
+
+        setErrors({});
+        axios.post('/contact', data)
+            .then(res => {
+                console.log(res.data);
+                M.toast({
+                    html: 'Message Sent',
+                    classes: 'toast-valid'
+                });
+                setName('');
+                setEmail('');
+                setMessage('');
+            })
+            .catch(err => {
+                M.toast({
+                    html: 'Sending Failed',
+                    classes: 'toast-invalid'
+                });
+                console.error(err)
+            });
+
+    };
+
     return (
         <>
             <>
@@ -19,7 +98,7 @@ const Contact = () => {
                 <h4>Contact Us</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et earum odit vero voluptas. Veritatis, adipisci iure! Quas nihil ipsam expedita eos doloremque minus quibusdam, fugit amet sequi a, nemo ad!</p>
                 <div className="contact-content">
-                    <form>
+                    <form onSubmit={onSubmit} noValidate>
                         <TextInput 
                             label="* Name"
                             icon="mdi-alphabetical"
@@ -43,7 +122,7 @@ const Contact = () => {
                             icon="mdi-message-processing-outline"
                             title="Your message is required"
                             value={message}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => setMessage(e.target.value)}
                             errorMessage={errors.message}
                         />
                         <button className="button">Send</button>

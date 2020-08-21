@@ -7,7 +7,8 @@ const Image = ({ image, setSelectedImage }) => (
         whileHover={{ opacity: 1 }}
     >
         <motion.img 
-            src={image} alt="Abia State Ministry of Education" 
+            src={image} 
+            alt="Abia State Ministry of Education" 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}

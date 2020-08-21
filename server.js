@@ -1,14 +1,52 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 const sgMail = require('@sendgrid/mail');
+const Validator = require('validator');
 const dotenv = require('dotenv');
 const path = require('path');
 
 dotenv.config();
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 const port = process.env.PORT;
 const publicPath = path.resolve(__dirname, 'client', 'build');
+
+const isEmpty = (value) => (
+    value === undefined ||
+    value === null ||
+    (typeof value === 'object' && Object.keys(value).length === 0) ||
+    (typeof value === 'string' && value.trim().length === 0)
+);
+
+const validateMessage = (data) => {
+    let errors = {};
+    data.name = !isEmpty(data.name) ?  data.name : '';
+    data.email = !isEmpty(data.email) ?  data.email : '';
+    data.message = !isEmpty(data.message) ?  data.message : '';
+
+    if (Validator.isEmpty(data.name)) {
+        errors.name = 'Your name is required';
+    }
+
+    if (Validator.isEmpty(data.email)) {
+        errors.email = 'Email Address is required!';
+    }
+    if (!Validator.isEmail(data.email)) {
+        errors.email = 'Invalid Email Address!';
+    }
+
+    if (Validator.isEmpty(data.message)) {
+        errors.message = 'Your message is required!';
+    }
+
+    return {
+        errors,
+        isValid: isEmpty(errors)
+    };
+};
 
 app.use(express.static(publicPath));
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -18,7 +56,6 @@ app.get('*', (req, res) => {
 });
 
 app.post('/contact', (req, res) => {
-    console.log('contact');
     // const transporter = nodemailer.createTransport({
     //     host: 'mail.privateemail.com',
     //     port: 465,
@@ -48,13 +85,21 @@ app.post('/contact', (req, res) => {
 
     // });
 
+    const { errors, isValid } = validateMessage(req.body);
+
+    if (!isValid) {
+        return res.status(400).json({ errors })
+    }
+
+    const { name, email, message } = req.body;
+
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-        to: 'uzoanyadominic@gmail.com',
-        from: 'test@example.com',
-        subject: 'Sending with Twilio SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        to: 'contact@abiaministryofeducation.org',
+        from: email,
+        subject: `Message from ${name} via abiaministryofeducation.org`,
+        text: message
+        // html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     };
     sgMail.send(msg);
     return res.status(200).json({ msg: 'Message sent' })
