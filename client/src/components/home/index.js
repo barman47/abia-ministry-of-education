@@ -6,6 +6,7 @@ import News from './News';
 import About from './About';
 import Team from './Team';
 import MissionAndVision from './MisionAndVision';
+import GoogleMap from './GoogleMap';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
                 <About />
                 <Team />
                 <MissionAndVision />
+                <GoogleMap />
             </>
         </>
     );

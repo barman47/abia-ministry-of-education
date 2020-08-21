@@ -10,7 +10,9 @@ const About = () => (
             <p>The cardinal objective of the Ministry is to, through the general goals of the State Education Sector, achieve the acquisition of appropriate skills, mental, physical and social abilities and competences to empower the individual to live in, and contribute positively to the society.</p>
         </div>
         <div>
-            <img src={chairman} alt="" />
+            <img src={chairman} alt="Hon. Kanelechi CK Nwangwa, Ph.D" />
+            <h5>Hon. Kanelechi CK Nwangwa, Ph.D</h5>
+            <p>Commissioner of Education Abia State</p>
         </div>
     </section>
 );

@@ -8,15 +8,17 @@
 
     section {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         column-gap: $xlg;
         row-gap: $xlg;
 
         div {
             border-radius: 10px;
             box-shadow: $shadow;
+            cursor: pointer;
             padding: $lg;
             text-align: center;
+            transition: $transition;
 
             img {
                 border-radius: 50%;
@@ -29,6 +31,9 @@
                 margin-bottom: $sm;
                 margin-top: $sm;
             }
+        }
+        div:hover {
+            box-shadow: 0 0 40px $gray;
         }
     }
 }

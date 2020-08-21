@@ -7,7 +7,7 @@ const Banner = () => {
             <div>
                 <header>
                     <h3>Abia State Ministry of Education</h3>
-                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laborum sint esse atque nobis illo necessitatibus asperiores libero eveniet officiis?</h6>
+                    <h6>The executive arm of the Abia state government, responsible for providing access to, and improving the quality of basic education.</h6>
                     <Link to="/about" className="button">Read More</Link>
                 </header>
             </div>

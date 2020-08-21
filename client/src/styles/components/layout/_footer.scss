@@ -5,10 +5,15 @@ footer {
     padding-bottom: $lg;
     padding-top: $lg;
     section:first-child {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        color: $primary-color;
+        text-align: center;
         column-gap: $xs;
         margin-bottom: $lg;
+
+        h5 {
+            font-weight: 500;
+            color: $primary-color;
+        }
 
         a {
             justify-self: flex-end;
@@ -20,6 +25,19 @@ footer {
 
         p {
             align-self: center;
+        }
+
+        span {
+            position: relative;
+            top: 1px;
+        }
+
+        a {
+            color: $primary-color;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     }
 
