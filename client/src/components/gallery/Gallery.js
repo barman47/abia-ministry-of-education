@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { motion } from 'framer-motion';
+
+import { sectionVariants } from '../../animationVariants';
 
 import Image from './Image';
-import ImageModal from '../ImageModal';
+import ImageModal from '../common/ImageModal';
+import Layout from '../layout/Layout';
 
 import image1 from '../../img/1.jpg';
 import image2 from '../../img/2.jpg';
@@ -39,11 +43,17 @@ const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
 
     return (
-        <>
+        <Layout>
             <>
                 <Helmet><title>Photo Gallery - Abia State Ministry of Education</title></Helmet>
             </>
-            <section className="gallery">
+            <motion.section 
+                className="gallery"
+                variants={sectionVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"    
+            >
                 { selectedImage && <ImageModal setSelectedImage={setSelectedImage} selectedImage={selectedImage} /> }
                 <h4>Photo Gallery</h4>
                 <section>
@@ -78,8 +88,8 @@ const Gallery = () => {
                     <Image setSelectedImage={setSelectedImage} image={image29} />
                     <Image setSelectedImage={setSelectedImage} image={image30} />
                 </section>
-            </section>
-        </>
+            </motion.section>
+        </Layout>
     );
 };
 

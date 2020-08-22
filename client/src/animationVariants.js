@@ -7,10 +7,6 @@ export const homeVariants = {
         transition: {
             type: 'spring',
             stifness: 120
-
-            // ease: 'easeInOut'
-            // delay: 1.5,
-            // duration: 1.5
         }
     },
     exit: {
@@ -28,8 +24,7 @@ export const sectionVariants = {
     visible: {
         x: 0,
         transition: {
-            type: 'spring',
-            stifness: 120
+            ease: 'easeInOut'
         }
     },
     exit: {

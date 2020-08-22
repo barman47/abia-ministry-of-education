@@ -1,0 +1,18 @@
+a.btn-floating.fab {
+    background-color: darken($secondary-color, 5);
+    display: none;
+    position: fixed;
+    bottom: $xlg;
+    right: $lg;
+    text-align: center;
+}
+
+a.btn-floating.fab:hover {
+    background-color: darken($secondary-color, 10);
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    a.btn-floating.fab {
+        right: $xs;
+    }
+}

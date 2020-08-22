@@ -41,11 +41,30 @@ nav {
     .menu-icon {
         color: $off-black;
     }
+
+    h6 {
+        color: $primary-color;
+        display: none;
+        font-weight: 500;
+    }
 }
 
 @media screen and (max-width: $md-breakpoint) {
     nav {
         width: 100vw;
+
+        .nav-wrapper {
+            display: flex;
+            flex-direction: row;
+            padding-left: $lg;
+
+            h6 {
+                display: block;
+                margin: 0;
+                margin-left: -$md;
+                width: 200%;
+            }
+        }
 
         .logo img {
             width: $xxxlg;
@@ -55,10 +74,33 @@ nav {
             display: none;
         }
     }
+
+    .sidenav {
+        display: flex;
+        flex-direction: column;
+        img {
+            margin: $xs auto;
+            width: 10em;
+        }
+
+        h6 {
+            font-weight: 500;
+            color: $primary-color;
+            text-align: center;
+        }
+    }
 }
 
-@media screen and (max-width: $md-breakpoint) {
+@media screen and (max-width: $sm-breakpoint) {
     nav {
+        .nav-wrapper {
+            padding-left: 0;
+        }
+        h6 {
+            font-size: $xs;
+            margin-left: -$xxxlg !important;
+        }
+
         .logo img {
             width: $lg;
         }

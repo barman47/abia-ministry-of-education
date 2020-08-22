@@ -14,8 +14,8 @@ const Header = () => {
         const mobileLinks = document.querySelectorAll('.mobile-link');
         mobileLinks.forEach(mobileLink => {
             mobileLink.addEventListener('click', () => { 
-                // instances[0].close();
-                setTimeout(() => instances[0].close(), 1000);
+                instances[0].close();
+                // setTimeout(() => instances[0].close(), 1000);
             });
         });
         // eslint-disable-next-line
@@ -23,16 +23,17 @@ const Header = () => {
 
     return (
         <section>
-            <nav>
+            <nav id="top">
                 <div className="nav-wrapper">
                     <Link to="#" data-target="mobile-menu" className="sidenav-trigger menu-icon"><span className="mdi mdi-menu"></span></Link>
                     <div className="coat-of-arms">
                         <Link to="/"><img src={coatOfArms} alt="" /></Link>
                     </div>
+                    <h6>Abia State Ministry of Education</h6>
                     <ul className="links hide-on-med-and-down">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="about">About</Link></li>
-                        <li><Link to="/news">News</Link></li>
+                        <li><Link to="#!">News</Link></li>
                         <li><Link to="/contact">Contact</Link></li>     
                         <li><Link to="/gallery">Gallery</Link></li>   
                     </ul>
@@ -42,9 +43,12 @@ const Header = () => {
                 </div>
             </nav>
             <ul className="sidenav" id="mobile-menu">
+                <img src={logo} alt="Abia State Ministry of Education" />
+                <h6>Abia State Ministry of Education</h6>
+                <li className="divider"></li>
                 <li><Link to="/" className="mobile-link">Home</Link></li>
                 <li><Link to="about" className="mobile-link">About</Link></li>
-                <li><Link to="/news" className="mobile-link">News</Link></li>
+                <li><Link to="#!" className="mobile-link">News</Link></li>
                 <li><Link to="/contact" className="mobile-link">Contact</Link></li>     
                 <li><Link to="/gallery" className="mobile-link">Gallery</Link></li>
             </ul>

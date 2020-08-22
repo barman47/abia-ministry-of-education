@@ -1,0 +1,38 @@
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    img {
+        width: 15em;
+    }
+    
+    h1 {
+        color: $primary-color;
+        font-weight: 500;
+    }
+    
+    span:nth-child(3) {
+        background-color: $primary-color;
+        color: $white;
+        font-size: $lg;
+        padding: $xs;
+        width: 50%;
+        width: initial;
+    }
+
+    h6 {
+        color: $primary-color;
+        margin-bottom: $xlg;
+        margin-top: $xlg;
+    }
+
+    a {
+        padding-left: $sm;
+        padding-right: $sm;
+        width: initial;
+    }
+}

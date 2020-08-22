@@ -1,12 +1,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { motion } from 'framer-motion';
+
+import Layout from '../layout/Layout';
+
+import { sectionVariants } from '../../animationVariants';
 
 const About = () => (
-    <>
+    <Layout>
         <>
             <Helmet><title>About - Abia State Ministry of Education</title></Helmet>
         </>
-        <section className="about-us">
+        <motion.section 
+            className="about-us"
+            variants={sectionVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <h3>About Abia State Ministry of Education</h3>
             <section>
                 <h4>Brief History</h4>
@@ -341,8 +352,8 @@ const About = () => (
                     <strong>SCHOLARSHIP</strong> Award Programmes from Federal and Assisting Agencies are handled when they are advertised : Commonwealth and Fellowship Plan (CWFP) Award, Bi-lateral Education Agreement (BEA) Awards, Agbami Scholarship Award, Nigeria Award Scholarship, COWBELL PEDIA.
                 </div>
             </section>
-        </section>
-    </>
+        </motion.section>
+    </Layout>
 );
 
 export default About;
