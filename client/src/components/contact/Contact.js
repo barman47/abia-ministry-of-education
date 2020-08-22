@@ -54,7 +54,6 @@ const Contact = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        alert('button clicked');
         const data = {
             name,
             email,
