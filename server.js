@@ -61,8 +61,8 @@ app.post('/contact', (req, res) => {
     //     port: 465,
     //     secure: true, // true for 465, false for other ports
     //     auth: {
-    //         user: 'contact@abiaministryofeducation.org',
-    //         pass: '@BIAmoe20'
+    //         user: process.env.PRIVATE_EMAIL_USERNAME,
+    //         pass: process.env.PRIVATE_EMAIL_PASSWORD
     //     },
     // });
 
