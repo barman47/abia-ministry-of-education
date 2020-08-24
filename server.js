@@ -1,6 +1,7 @@
 const express = require('express');
 // const nodemailer = require('nodemailer');
 const sgMail = require('@sendgrid/mail');
+const secure = require('express-force-https');
 const Validator = require('validator');
 const dotenv = require('dotenv');
 const path = require('path');
@@ -50,6 +51,7 @@ const validateMessage = (data) => {
 
 app.use(express.static(publicPath));
 app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(secure);
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(publicPath, 'index.html'));
