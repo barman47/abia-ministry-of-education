@@ -1,0 +1,38 @@
+.news-page {
+    background-color: $white;
+    padding: 0 $lg;
+
+    h4 {
+        color: $primary-color;
+        font-weight: 600;
+        margin: 0 0 $sm 0;
+        text-align: center;
+    }
+
+    article {
+        background-color: $off-white;
+        margin-bottom: $xxlg;
+        padding: $lg;
+
+        h5 {
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: $xs;
+        }
+
+        ol {
+            margin-left: $lg;
+        }
+    }
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    .news-page {
+        h5 {
+            font-size: $sm;
+            text-align: center;
+        }
+    }
+}

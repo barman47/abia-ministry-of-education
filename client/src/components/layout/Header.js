@@ -32,8 +32,8 @@ const Header = () => {
                     <h6>Abia State Ministry of Education</h6>
                     <ul className="links hide-on-med-and-down">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="about">About</Link></li>
-                        <li><Link to="#!">News</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/news">News</Link></li>
                         <li><Link to="/contact">Contact</Link></li>     
                         <li><Link to="/gallery">Gallery</Link></li>   
                     </ul>
@@ -47,8 +47,8 @@ const Header = () => {
                 <h6>Abia State Ministry of Education</h6>
                 <li className="divider"></li>
                 <li><Link to="/" className="mobile-link">Home</Link></li>
-                <li><Link to="about" className="mobile-link">About</Link></li>
-                <li><Link to="#!" className="mobile-link">News</Link></li>
+                <li><Link to="/about" className="mobile-link">About</Link></li>
+                <li><Link to="/news" className="mobile-link">News</Link></li>
                 <li><Link to="/contact" className="mobile-link">Contact</Link></li>     
                 <li><Link to="/gallery" className="mobile-link">Gallery</Link></li>
             </ul>

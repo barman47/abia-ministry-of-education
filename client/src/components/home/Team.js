@@ -15,29 +15,9 @@ const Team = () => (
         <h4>Heads and Directors</h4>
         <section>
             <div>
-                <img src={schoolarships} alt="Dr. Mrs Nnenna Anyanwu" />
-                <h6>Dr. Mrs Nnenna Anyanwu</h6>
-                <p>Director of Scholarships Department</p>
-            </div>
-            <div>
-                <img src={curriculum} alt="Mr. Kalu John" />
-                <h6>Mr. Kalu John</h6>
-                <p>Director, Curriculum Department</p>
-            </div>
-            <div>
                 <img src={administration} alt="Rev. Jane Omereonye" />
                 <h6>Rev. Jane Omereonye</h6>
                 <p>Director, Department of Administration</p>
-            </div>
-            <div>
-                <img src={science} alt="Mr. Alozie Wogu" />
-                <h6>Mr. Alozie Wogu</h6>
-                <p>Director of Science, Technical and Higher Education</p>
-            </div>
-            <div>
-                <img src={qa} alt="Mrs. Justina Uwajimgba" />
-                <h6>Mrs. Justina Uwajimgba</h6>
-                <p>Director of Quality Assurance Unit</p>
             </div>
             <div>
                 <img src={finance} alt="Mr. Okorie Ibuchim" />
@@ -45,19 +25,40 @@ const Team = () => (
                 <p>Director of Finance Department</p>
             </div>
             <div>
-                <img src={education} alt="Mrs. Adindu" />
-                <h6>Mrs. Adindu</h6>
-                <p>Director Education Services Department</p>
-            </div>
-            <div>
                 <img src={inspectorate} alt="Mrs. Rhoda Dimanochie" />
                 <h6>Mrs. Rhoda Dimanochie</h6>
                 <p>Communications Department</p>
             </div>
             <div>
+                <img src={curriculum} alt="Mr. Kalu John" />
+                <h6>Mr. Kalu John</h6>
+                <p>Director, Curriculum Department</p>
+            </div>
+            <div>
+                <img src={science} alt="Mr. Alozie Wogu" />
+                <h6>Mr. Alozie Wogu</h6>
+                <p>Director of Science, Technical and Higher Education</p>
+            </div>
+            <div>
+                <img src={schoolarships} alt="Dr. Mrs Nnenna Anyanwu" />
+                <h6>Dr. Mrs Nnenna Anyanwu</h6>
+                <p>Director of Scholarships Department</p>
+            </div>
+            <div>
+                <img src={qa} alt="Mrs. Justina Uwajimgba" />
+                <h6>Mrs. Justina Uwajimgba</h6>
+                <p>Director of Quality Assurance Unit</p>
+            </div>
+            <div>
+                <img src={education} alt="Mrs. Adindu" />
+                <h6>Mrs. Adindu</h6>
+                <p>Director Education Services Department</p>
+            </div>
+            
+            <div>
                 <img src={information} alt="Mrs. Ugochi Ihediwa" />
                 <h6>Mrs. Ugochi Ihediwa</h6>
-                <p>Director Information Department</p>
+                <p>Director Information Unit</p>
             </div>
         </section>
     </section>

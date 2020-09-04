@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import news1 from '../../img/news1.jpg';
+import seb1 from '../../img/seb1.jpeg';
 
 const News = () => (
     <section className="news">
@@ -11,28 +12,16 @@ const News = () => (
         </div>
         <div>
             <section>
-                <img src={news1} alt="" />
-                <h5>Lorem ipsum dolor sit amet.</h5>
-                <small>16th August, 2020</small>
-                <Link to="/">Read Full Story</Link>
+                <img src={news1} alt="Abia State Ministry of Education" />
+                <h6 className="truncate">The State Government is by this . . .</h6>
+                <small>2nd September, 2020</small>
+                <Link to="/news">Read Full Story</Link>
             </section>
             <section>
-                <img src={news1} alt="" />
-                <h5>Lorem ipsum dolor sit amet.</h5>
-                <small>16th August, 2020</small>
-                <Link to="/">Read Full Story</Link>
-            </section>
-            <section>
-                <img src={news1} alt="" />
-                <h5>Lorem ipsum dolor sit amet.</h5>
-                <small>16th August, 2020</small>
-                <Link to="/">Read Full Story</Link>
-            </section>
-            <section>
-                <img src={news1} alt="" />
-                <h5>Lorem ipsum dolor sit amet.</h5>
-                <small>16th August, 2020</small>
-                <Link to="/">Read Full Story</Link>
+                <img src={seb1} alt="Abia State Ministry of Education" />
+                <h6 className="truncate">The new Secondary Education . . .</h6>
+                <small>1st, September, 2020</small>
+                <Link to="/news">Read Full Story</Link>
             </section>
         </div>
     </section>

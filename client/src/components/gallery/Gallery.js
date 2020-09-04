@@ -38,6 +38,9 @@ import image27 from '../../img/news1.jpg';
 import image28 from '../../img/news2.jpg';
 import image29 from '../../img/news3.jpg';
 import image30 from '../../img/news4.jpg';
+import seb1 from '../../img/seb1.jpeg';
+import seb2 from '../../img/seb2.jpeg';
+import seb3 from '../../img/seb3.jpeg';
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -87,6 +90,9 @@ const Gallery = () => {
                     <Image setSelectedImage={setSelectedImage} image={image28} />
                     <Image setSelectedImage={setSelectedImage} image={image29} />
                     <Image setSelectedImage={setSelectedImage} image={image30} />
+                    <Image setSelectedImage={setSelectedImage} image={seb1} />
+                    <Image setSelectedImage={setSelectedImage} image={seb2} />
+                    <Image setSelectedImage={setSelectedImage} image={seb3} />
                 </section>
             </motion.section>
         </Layout>
