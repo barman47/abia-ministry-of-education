@@ -8,14 +8,14 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Gallery from './components/gallery/Gallery';
 import News from './components/news/News';
-import ScrollToTop from './components/layout/ScrollToTop';
+// import ScrollToTop from './components/layout/ScrollToTop';
 import Page404 from './components/Page404';
 
 const App = () => {
 	const location = useLocation();
 
 	return (
-		<ScrollToTop>
+		<>
 			<FAB />
 			<AnimatePresence exitBeforeEnter initial={false}>
 				<Switch location={location} key={location.pathname}>
@@ -27,7 +27,7 @@ const App = () => {
 					<Route component={Page404} />
 				</Switch>
 			</AnimatePresence>
-		</ScrollToTop>
+		</>
 	);
 }
 

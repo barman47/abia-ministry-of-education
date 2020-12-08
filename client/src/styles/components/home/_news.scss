@@ -27,7 +27,7 @@
 
     div:last-child {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         column-gap: $xlg;
         row-gap: $xxxlg;
 
@@ -38,11 +38,17 @@
             display: flex;
             flex-direction: column;
             padding-bottom: $md;
+            max-width: 100%;
 
             img {
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
                 width: 100%;
+            }
+
+            #image {
+    
+                height: 20em;
             }
 
             h6 {

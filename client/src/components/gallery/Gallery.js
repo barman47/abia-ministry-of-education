@@ -41,6 +41,8 @@ import image30 from '../../img/news4.jpg';
 import seb1 from '../../img/seb1.jpeg';
 import seb2 from '../../img/seb2.jpeg';
 import seb3 from '../../img/seb3.jpeg';
+import nov9 from '../../img/november-9th(2).jpeg';
+import nov92nd from '../../img/november-9th.jpeg';
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -60,6 +62,11 @@ const Gallery = () => {
                 { selectedImage && <ImageModal setSelectedImage={setSelectedImage} selectedImage={selectedImage} /> }
                 <h4>Photo Gallery</h4>
                 <section>
+                    <Image setSelectedImage={setSelectedImage} image={nov92nd} />
+                    <Image setSelectedImage={setSelectedImage} image={nov9} />
+                    <Image setSelectedImage={setSelectedImage} image={seb1} />
+                    <Image setSelectedImage={setSelectedImage} image={seb2} />
+                    <Image setSelectedImage={setSelectedImage} image={seb3} />
                     <Image setSelectedImage={setSelectedImage} image={image1} />
                     <Image setSelectedImage={setSelectedImage} image={image2}  />
                     <Image setSelectedImage={setSelectedImage} image={image3} />
@@ -90,9 +97,6 @@ const Gallery = () => {
                     <Image setSelectedImage={setSelectedImage} image={image28} />
                     <Image setSelectedImage={setSelectedImage} image={image29} />
                     <Image setSelectedImage={setSelectedImage} image={image30} />
-                    <Image setSelectedImage={setSelectedImage} image={seb1} />
-                    <Image setSelectedImage={setSelectedImage} image={seb2} />
-                    <Image setSelectedImage={setSelectedImage} image={seb3} />
                 </section>
             </motion.section>
         </Layout>
