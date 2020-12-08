@@ -16,14 +16,14 @@ const News = () => (
             <section>
                 <img src={commissioner} alt="Abia State Ministry of Education" />
                 <h6 className="truncate">The Commissioner for Education . . .</h6>
-                <small>16th, November, 2020</small>
-                <Link to="/news#16th-november">Read Full Story</Link>
+                <small>2nd, December, 2020</small>
+                <Link to="/news#2nd-december">Read Full Story</Link>
             </section>
             <section>
                 <img id="image" src={november9th} alt="Abia State Ministry of Education" />
                 <h6 className="truncate">The Honourable Commissioner for . . .</h6>
                 <small>9th, November, 2020</small>
-                <Link to="/news#9th-november">Read Full Story</Link>
+                <Link to="/news#11th-november">Read Full Story</Link>
             </section>
             <section>
                 <img src={news1} alt="Abia State Ministry of Education" />

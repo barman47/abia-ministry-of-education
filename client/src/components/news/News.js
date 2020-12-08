@@ -19,7 +19,7 @@ const News = () => {
                 exit="exit"
             >
                 <h4>News Updates</h4>
-                <article id="16th-november">
+                <article id="2nd-december">
                     <p>The Commissioner for Education, Dr. Kanelechi Nwangwa has ettolled the Chancellor Gregory University, Uturu Prof. Gregory Ibe for his vision and passion for development of Education in the Country.</p>
                     <p>Dr. Nwangwa who stated this when he paid a working visit to the institution to see the academic activities and infrastructural facilities in the citadel of learning assured that his office will partner the institution.</p>
                     <p>The Education Commissioner further expressed happiness that the University has continued to develop human resources through technology, Agriculture, science and entrepreneurship as well as training and retraining of staff for effective service delivery.</p>
@@ -29,7 +29,7 @@ const News = () => {
                     <p>The Commissioner for Education Dr. Kanelechi Nwangwa had earlier joined via zoom meeting of the University on the annual international conference on Information Technology and Economic Development (ICITED) 2020.</p>
                     <p>Body of Special Advisers to the Governor on Education matters and Directors of the Ministry, accompanied Dr. Nwangwa on the visit.</p>
                 </article>
-                <article id="9th-november">
+                <article id="11th-november">
                    <p>The Honourable Commissioner for Education Dr. Kanelechi C.K. Nwangwa says the present Government is committed to building a functional technical department in all technical schools in the state to make them vocational schools.</p>
                    <p>Dr. K.C.K. Nwangwa made the assertion at the foundation laying ceremony of Amaise Community Secondary Technical school, Ukpakiri. He noted that there is need to give children vocational education in the present age so that they can have applicable and functional Education that will  help them stabilize.</p>
                    <p>The education boss used the medium to urge the community to embrace the opportunity to ensure that the facilities are secured and promised to renovate  the dilapidated buildings in the primary section . He also charged  parents and guardians to release their wards to start off 2020/2021 academic session in the school.</p>
